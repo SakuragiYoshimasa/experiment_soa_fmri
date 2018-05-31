@@ -42,7 +42,7 @@ public static class TaskMaker {
 		}
 		
 		//Repr test
-		taskPattern [3].isReproduce = true;
+		//taskPattern [3].isReproduce = true;
 		return taskPattern;
 	}
 
