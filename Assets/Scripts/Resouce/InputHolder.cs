@@ -32,4 +32,10 @@ public class InputHolder : Singleton<InputHolder> {
 		joystckAxis.x = x;
 		joystckAxis.y = y;
 	}
+
+	void FixedUpdate(){
+		float x = Input.GetAxis("Horizontal");
+		float y = Input.GetAxis("Vertical");
+		JoystickFrameWriter.I.Write(x,y);
+	}
 }
