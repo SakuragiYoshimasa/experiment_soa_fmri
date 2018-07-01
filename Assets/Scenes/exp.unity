@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystckAxis: {x: 0, y: 0}
-  answerButtonCode: space
+  answerButtonCode: joystick button 0
   answerButton: 0
   touchedPanelIndex: 0
 --- !u!1 &275298789
@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSyncTest: 0
-  isPractice: 0
+  isPractice: 1
   isDelayDiscTask: 0
   expState: 0
   taskState: 0

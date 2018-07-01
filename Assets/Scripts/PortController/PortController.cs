@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using inpoutx64;
+using ButtonTask;
 
 public class PortController : MonoBehaviour {
 	bool open = false;
@@ -11,24 +12,26 @@ public class PortController : MonoBehaviour {
 	void Start () {
 		if (!PortControl.IsInpOutDriverOpen()) {
             Debug.Log("Driver is not opened !!!");
+			LogWriter.I.Write("Driver is not opend!!!");
             return;
         }
 	}
 
 	void Update () {
+		/*
 		if(open){
 			decData = 255;
 			PortControl.Output(decAdd, decData);
 		}else{
 			decData = 0;
 			PortControl.Output(decAdd, decData);
-		}
+		} */
 	}
 
-	public IEnumerator Out(int data){
-		yield return new WaitForEndOfFrame();
+	public void Out(int data){
+		//yield return new WaitForEndOfFrame();
 		PortControl.Output(decAdd, data);
-		Invoke("Close", 0.2f);
+		Invoke("Close", 0.1f);
 	}
 
 	void Close(){

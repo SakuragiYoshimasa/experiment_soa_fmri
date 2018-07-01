@@ -58,7 +58,8 @@ namespace ButtonTask {
 				rHolder.instructionPanels[index].GetComponent<MeshRenderer>().material.color = Color.red;
 				InputHolder.I.answerButton = false;
 				InputHolder.I.TouchedPanelIndex = 0;
-				StartCoroutine(rHolder.portController.Out(255));
+				//StartCoroutine(rHolder.portController.Out(255));
+				rHolder.portController.Out(255);
 				DateTime start_time = DateTime.Now;
 
 				//Sum tome of this routine is 2.0secs

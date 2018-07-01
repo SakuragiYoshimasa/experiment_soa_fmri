@@ -22,9 +22,11 @@ public class InputHolder : Singleton<InputHolder> {
 	}
 
 	void Update () {
+		
 		if(Input.GetKeyDown(answerButtonCode)){
 			answerButton = true;
-			StartCoroutine(ResourceHolder.I.portController.Out(1));
+			//StartCoroutine(ResourceHolder.I.portController.Out(1));
+			ResourceHolder.I.portController.Out(1);
 		}
 
 		float x = Input.GetAxis("Horizontal");
